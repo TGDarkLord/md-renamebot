@@ -1,8 +1,6 @@
 class Translation(object):
     
-    START_TXT = """ <b> Hi {} ,
- I'm A Simple Rename Bot With Permanent Thumbnail And Custom Caption support!</b>
-<b>Click help button to know more about me !</b>\n 
+    START_TXT = """<b><i>Hello 👋 {},\n\nI'm A Simple Rename Bot With Permanent Thumbnail And Custom Caption support!\nClick ℹ️ Help button to know more about me!</b></i>
 """
     PROGRESS_BAR = """\n
 ╭───[**🔅Progress Bar🔅**]───⍟
@@ -17,12 +15,14 @@ class Translation(object):
 ╰─────────────────⍟"""
     HELP_TXT = """
 <b><i><u>✨ AVAILABLE COMMANDS:</u> 
+
 ➢ /rename - To rename a file or video or audio
 ➢ /settings - To configure your configs 
 ➢ /addcaption - To add a custom caption
 ➢ /showcaption - To show your custom caption
 ➢ /deletethumb - To remove your custom thumbnail 
 ➢ /showthumb - To show your custom thumbnail
+
 <u>🔥 FEATURES:</u>
 ➻ support custom caption
 ➻ support custom thumbnail 
@@ -53,20 +53,19 @@ class Translation(object):
 """
     
     THUMBNAIL_TXT = """
-<b>🖼️ CUSTOM THUMBNAIL</b>
+<i><b>🖼️ CUSTOM THUMBNAIL
 
-you can add custom thumbnail simply by sending a photo to me 
-"""
+you can add custom thumbnail simply by sending a photo to me</i></b>"""
+    
     CUSTOM_CAPTION_TXT = """
-<b>📝 CUSTOM CAPTION</b>
+<i><b>📝 CUSTOM CAPTION</b>
 
 ➢ /addcaption <your caption> - To add your custom caption 
 
 <b>AVAILABLE FILLINGS:</b>
 • `{filename}` - new file name
 • `{size}` - size of the media
-• `{duration}` - duration of the media
-"""
+• `{duration}` - duration of the media</i>"""
     
     SETTINGS_TXT = "<b><u>⚙️ SETTINGS</u>\nConfigure your settings using this buttons</b>"
     BANNED_TXT = "<b>Sorry dude, You would be banned from using me</b>"
