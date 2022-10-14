@@ -1,7 +1,7 @@
 class Translation(object):
     
-    START_TXT = """<b><i>Hello 👋 {},\n\nI'm A Simple Rename Bot With Permanent Thumbnail And Custom Caption support!\nClick ℹ️ Help button to know more about me!</b></i>
-"""
+    START_TXT = """<b><i>Hello 👋 {},\n\nI'm A Simple Rename Bot With Permanent Thumbnail And Custom Caption Support!\n\nClick ℹ️ Help Button To know More About Me.</b></i>"""
+   
     PROGRESS_BAR = """\n
 ╭───[**🔅Progress Bar🔅**]───⍟
 │
@@ -14,7 +14,7 @@ class Translation(object):
 ├<b>⏱️ : {4}</b>
 ╰─────────────────⍟"""
     HELP_TXT = """
-<b><i><u>✨ AVAILABLE COMMANDS:</u> 
+<b><i><u>AVAILABLE COMMANDS:</u> 
 
 ➢ /rename - To rename a file or video or audio
 ➢ /settings - To configure your configs 
@@ -23,16 +23,17 @@ class Translation(object):
 ➢ /deletethumb - To remove your custom thumbnail 
 ➢ /showthumb - To show your custom thumbnail
 
-<u>🔥 FEATURES:</u>
+<u>FEATURES:</u>
+
 ➻ support custom caption
 ➻ support custom thumbnail 
 ➻ Available three upload mode  
 ➻ support broadcast</i></b>
 """ 
     OWNER_COMMANDS_TXT = """
-<b><i><u>👨 OWNER COMMANDS:</u>
+<b><i><u>ADMIN COMMANDS:</u>
 
-• Following commands only can use bot owner.
+⚠️ Following Commands Only Can Use Bot Admin.
 
 ➢ /ban - To ban a user 
 ➢ /unban - To unban a user 
@@ -53,12 +54,12 @@ class Translation(object):
 """
     
     THUMBNAIL_TXT = """
-<i><b>🖼️ CUSTOM THUMBNAIL
+<i><b>CUSTOM THUMBNAIL
 
 you can add custom thumbnail simply by sending a photo to me</i></b>"""
     
     CUSTOM_CAPTION_TXT = """
-<i><b>📝 CUSTOM CAPTION</b>
+<i><b>CUSTOM CAPTION</b>
 
 ➢ /addcaption <your caption> - To add your custom caption 
 
