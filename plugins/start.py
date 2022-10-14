@@ -76,7 +76,7 @@ async def cb_handler(client: Client , query: CallbackQuery):
                InlineKeyboardButton('📢 Project Channel', url='https://t.me/TechProjects_2022'),
                InlineKeyboardButton('♻️ Suppot Group', url='https://t.me/+uBASAptv8aJkMDU1')
              ]]
-        ))
+   ))
         
     elif data == "help":
         await query.message.edit_text(
@@ -89,14 +89,14 @@ async def cb_handler(client: Client , query: CallbackQuery):
                  ],[
                  InlineKeyboardButton('🔙 Back', callback_data="start")
             ]]
-        ))
+   ))
         
     elif data == "owner_cmd":
         await query.message.edit_text(
             text=Translation.OWNER_COMMANDS_TXT,
             reply_markup=InlineKeyboardMarkup(
                [[InlineKeyboardButton('Back', callback_data="help")]]
-        ))
+   ))
      
     elif data == "about":
         await query.message.edit_text(
@@ -107,7 +107,7 @@ async def cb_handler(client: Client , query: CallbackQuery):
             [[
               InlineKeyboardButton('🔙 Back', callback_data = "help"),
             ]]
-        ))
+   ))
      
     elif data in ['settings', 'toggle_mode']:
        mode = await db.get_uploadmode(user_id)
@@ -146,7 +146,7 @@ async def cb_handler(client: Client , query: CallbackQuery):
               ],[
                 InlineKeyboardButton('🔙 Back', callback_data="settings")
               ]]
-        ))
+   ))
              
     elif data =="show_caption":
         caption = await db.get_caption(user_id)
@@ -171,7 +171,7 @@ async def cb_handler(client: Client , query: CallbackQuery):
                 ],[
                 InlineKeyboardButton('Back', callback_data="settings")
                ]]
-        ))
+   ))
         
     elif data == "show_thumb":
         thumb = await db.get_thumbnail(user_id)
