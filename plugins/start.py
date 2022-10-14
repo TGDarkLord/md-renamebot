@@ -16,12 +16,10 @@ async def start(bot, message):
         Translation.START_TXT.format(user.mention),
         reply_markup=InlineKeyboardMarkup(
              [[
-               InlineKeyboardButton("♦️ Help", callback_data = "help")
+               InlineKeyboardButton("ℹ️ Help", callback_data = "help")
              ],[
-               InlineKeyboardButton('📢 Update Channel', url='https://t.me/venombotupdates'),
-               InlineKeyboardButton('♻️ Suppot Group', url='https://t.me/venombotsupport')
-             ],[
-                InlineKeyboardButton('📃 Source code', url='https://github.com/Mdbotz/md-renamebot')
+               InlineKeyboardButton('📢 Project Channel', url='https://t.me/TechProjects_2022'),
+               InlineKeyboardButton('♻️ Suppot Group', url='https://t.me/+uBASAptv8aJkMDU1')
              ]]
    ))
                             
@@ -63,12 +61,10 @@ async def cb_handler(client: Client , query: CallbackQuery):
             text=Translation.START_TXT.format(query.from_user.mention),
             reply_markup=InlineKeyboardMarkup(
              [[
-               InlineKeyboardButton("♦️ Help", callback_data = "help")
+               InlineKeyboardButton("ℹ️ Help", callback_data = "help")
              ],[
-               InlineKeyboardButton('📢 Update Channel', url='https://t.me/Md_bOTs'),
-               InlineKeyboardButton('♻️ Suppot Group', url='https://t.me/Md_bOTs')
-             ],[
-                InlineKeyboardButton('📃 Source code', url='https://github.com/hockbhmv/FileRenameBot')
+               InlineKeyboardButton('📢 Project Channel', url='https://t.me/TechProjects_2022'),
+               InlineKeyboardButton('♻️ Suppot Group', url='https://t.me/+uBASAptv8aJkMDU1')
              ]]
         ))
         
@@ -78,10 +74,10 @@ async def cb_handler(client: Client , query: CallbackQuery):
             disable_web_page_preview = True,
             reply_markup=InlineKeyboardMarkup(
                  [[
-                 InlineKeyboardButton('👨🏻 Owner commands', callback_data="owner_cmd"),
-                 InlineKeyboardButton('💬 About', callback_data="about")
+                 InlineKeyboardButton('🤴 Admin commands', callback_data="owner_cmd"),
+                 InlineKeyboardButton('😎 About', callback_data="about")
                  ],[
-                 InlineKeyboardButton('back', callback_data="start")
+                 InlineKeyboardButton('🔙 Back', callback_data="start")
             ]]
         ))
         
@@ -99,9 +95,7 @@ async def cb_handler(client: Client , query: CallbackQuery):
             disable_web_page_preview = True,
             reply_markup=InlineKeyboardMarkup(
             [[
-              InlineKeyboardButton('📃 Source code', url='https://github.com/Mdbotz/md-renamebot')
-            ],[
-              InlineKeyboardButton('Back', callback_data = "help"),
+              InlineKeyboardButton('🔙 Back', callback_data = "help"),
             ]]
         ))
      
