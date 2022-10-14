@@ -23,7 +23,7 @@ async def start(bot, message):
    if not await db.is_user_exist(user.id):
       await db.add_user(user.id)
    await message.reply_text(
-        Translation.START_TXT.format(user.mention),
+        Translation.START_TXT.format(user.mention, wish),
         reply_markup=InlineKeyboardMarkup(
              [[
                InlineKeyboardButton("ℹ️ Help", callback_data = "help")
@@ -68,7 +68,7 @@ async def cb_handler(client: Client , query: CallbackQuery):
     
     if data == "start":
         await query.message.edit_text(
-            text=Translation.START_TXT.format(query.from_user.mention),
+            text=Translation.START_TXT.format(query.from_user.mention, wish),
             reply_markup=InlineKeyboardMarkup(
              [[
                InlineKeyboardButton("ℹ️ Help", callback_data = "help")
