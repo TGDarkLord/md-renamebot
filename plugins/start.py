@@ -134,7 +134,7 @@ async def cb_handler(client: Client , query: CallbackQuery):
                 InlineKeyboardButton('👀 Show Caption', callback_data="show_caption"),
                 InlineKeyboardButton("🗑️ Delete Caption", callback_data="delete_caption")
               ],[
-                InlineKeyboardButton('Back', callback_data="settings")
+                InlineKeyboardButton('🔙 Back', callback_data="settings")
               ]]
         ))
              
