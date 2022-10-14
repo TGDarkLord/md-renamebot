@@ -70,9 +70,11 @@ async def cb_handler(client: Client , query: CallbackQuery):
         await query.message.edit_text(
             text=Translation.START_TXT.format(query.from_user.mention), (wish),
             reply_markup=InlineKeyboardMarkup(
-             [[ InlineKeyboardButton("ℹ️ Help", callback_data = "help") ],
-            [InlineKeyboardButton('📢 Project Channel', url='https://t.me/TechProjects_2022'),
-             InlineKeyboardButton('♻️ Suppot Group', url='https://t.me/+uBASAptv8aJkMDU1)] ]))
+             [[ 
+             InlineKeyboardButton("ℹ️ Help", callback_data = "help") 
+             ],[
+             InlineKeyboardButton('📢 Project Channel', url='https://t.me/TechProjects_2022'),
+             InlineKeyboardButton('♻️ Suppot Group', url='https://t.me/+uBASAptv8aJkMDU1)]]))
 
     elif data == "help":
         await query.message.edit_text(
