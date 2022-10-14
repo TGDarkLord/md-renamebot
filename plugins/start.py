@@ -27,7 +27,7 @@ async def start(bot, message):
         reply_markup=InlineKeyboardMarkup(
              [[
                InlineKeyboardButton("ℹ️ Help", callback_data = "help")
-             ],[
+               ],[
                InlineKeyboardButton('📢 Project Channel', url='https://t.me/TechProjects_2022'),
                InlineKeyboardButton('♻️ Suppot Group', url='https://t.me/+uBASAptv8aJkMDU1')
              ]]
@@ -72,11 +72,11 @@ async def cb_handler(client: Client , query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
              [[
                InlineKeyboardButton("ℹ️ Help", callback_data = "help")
-             ],[
+               ],[
                InlineKeyboardButton('📢 Project Channel', url='https://t.me/TechProjects_2022'),
                InlineKeyboardButton('♻️ Suppot Group', url='https://t.me/+uBASAptv8aJkMDU1')
-              )]]
-    )
+             ]]
+   ))
 
     elif data == "help":
         await query.message.edit_text(
@@ -88,7 +88,7 @@ async def cb_handler(client: Client , query: CallbackQuery):
                  InlineKeyboardButton('😎 About', callback_data="about")
                  ],[
                  InlineKeyboardButton('🔙 Back', callback_data="start")
-            ]]
+               ]]
    ))
         
     elif data == "owner_cmd":
