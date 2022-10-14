@@ -1,11 +1,21 @@
 import os
 import time
+import datetime
 from .database import db 
 from config import Config
 from translation import Translation
 from .utils import __version__ as bot_version
 from pyrogram import Client, filters, enums, __version__
 from pyrogram.types import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
+
+currentTime = datetime.datetime.now()
+
+if currentTime.hour < 12:
+	wish = "Good morning."
+elif 12 <= currentTime.hour < 12:
+	wish = 'Good afternoon.'
+else:
+	wish = 'Good evening.'
 
 @Client.on_message(filters.command("start"))
 async def start(bot, message):
