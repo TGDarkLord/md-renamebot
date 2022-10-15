@@ -29,7 +29,7 @@ async def start(bot, message):
             InlineKeyboardButton('📢 Project Channel', url='https://t.me/TechProjects_2022'),
             InlineKeyboardButton('♻️ Suppot Group', url='https://t.me/+uBASAptv8aJkMDU1')
             ]]
-      await message.reply_text(text=Translation.START_TXT.format(mention = message.from_user.mention, wish), reply_markup=InlineKeyboardMarkup(buttons))
+        await message.reply_text(text=Translation.START_TXT.format(mention = message.from_user.mention, wish), reply_markup=InlineKeyboardMarkup(buttons))
                             
 @Client.on_message(filters.command('settings'))
 async def settings(bot, message):
