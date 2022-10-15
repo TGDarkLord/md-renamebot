@@ -22,16 +22,14 @@ async def start(bot, message):
    user = message.from_user
    if not await db.is_user_exist(user.id):
       await db.add_user(user.id)
-   await message.reply_text(
-        Translation.START_TXT.format(user.mention), (wish),
-        reply_markup=InlineKeyboardMarkup(
-             [[
-               InlineKeyboardButton("ℹ️ Help", callback_data = "help")
-               ],[
-               InlineKeyboardButton('📢 Project Channel', url='https://t.me/TechProjects_2022'),
-               InlineKeyboardButton('♻️ Suppot Group', url='https://t.me/+uBASAptv8aJkMDU1')
-             ]]
-   ))
+   if len(message.command) != 2:
+        buttons = [[
+            InlineKeyboardButton("ℹ️ Help", callback_data = "help")
+            ],[
+            InlineKeyboardButton('📢 Project Channel', url='https://t.me/TechProjects_2022'),
+            InlineKeyboardButton('♻️ Suppot Group', url='https://t.me/+uBASAptv8aJkMDU1')
+            ]]
+ 
                             
 @Client.on_message(filters.command('settings'))
 async def settings(bot, message):
