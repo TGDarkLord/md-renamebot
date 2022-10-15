@@ -29,7 +29,7 @@ async def start(bot, message):
             InlineKeyboardButton('📢 Project Channel', url='https://t.me/TechProjects_2022'),
             InlineKeyboardButton('♻️ Suppot Group', url='https://t.me/+uBASAptv8aJkMDU1')
             ]]
- 
+      await message.reply_text(text=Translation.START_TXT.format(mention = message.from_user.mention, wish), reply_markup=InlineKeyboardMarkup(buttons))
                             
 @Client.on_message(filters.command('settings'))
 async def settings(bot, message):
@@ -65,19 +65,17 @@ async def cb_handler(client: Client , query: CallbackQuery):
     user_id = query.from_user.id
     
     if data == "start":
-        await query.message.edit_text(
-            text=Translation.START_TXT.format(query.from_user.mention), (wish),
-            reply_markup=InlineKeyboardMarkup(
-             [[ 
-             InlineKeyboardButton("ℹ️ Help", callback_data = "help") 
-             ],[
-             InlineKeyboardButton("📢 Project Channel", url="https://t.me/TechProjects_2022"),
-             InlineKeyboardButton("♻️ Suppot Group", url="https://t.me/+uBASAptv8aJkMDU1")
-           ]]
+    if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
+        buttons = [[    
+            InlineKeyboardButton("ℹ️ Help", callback_data = "help") 
+            ],[
+            InlineKeyboardButton("📢 Project Channel", url="https://t.me/TechProjects_2022"),
+            InlineKeyboardButton("♻️ Suppot Group", url="https://t.me/+uBASAptv8aJkMDU1")
+            ]]
 
-       )
+       
    
-       )
+      
 
     elif data == "help":
         await query.message.edit_text(
