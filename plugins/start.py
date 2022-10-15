@@ -72,10 +72,7 @@ async def cb_handler(client: Client , query: CallbackQuery):
             InlineKeyboardButton("📢 Project Channel", url="https://t.me/TechProjects_2022"),
             InlineKeyboardButton("♻️ Suppot Group", url="https://t.me/+uBASAptv8aJkMDU1")
             ]]
-
-       
-   
-      
+        await query.message.edit_text(text=Translation.START_TXT.format(mention = message.from_user.mention, wish), reply_markup=InlineKeyboardMarkup(buttons))   
 
     elif data == "help":
         await query.message.edit_text(
