@@ -10,8 +10,8 @@
     "Rename",
     "pyrogram"
   ],
-  "website": "https://github.com/Mdbotz/md-renamebot",
-  "repository": "https://github.com/Mdbotz/md-renamebot",
+  "website": "https://github.com/TGDarkLord/md-renamebot",
+  "repository": "https://github.com/TGDarkLord/md-renamebot",
   "env": {
     "API_ID": {
       "description": "Get this value from https://my.telegram.org",
